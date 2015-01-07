@@ -28,7 +28,7 @@
 2. 能够支持广播通信；
 3. 会出现“预期之外的更新”情况；
 
-## 具体实现时的一些Issue
+## 实现细节
 1. 建立Subjects和Observers的映射
 
 	关联Subject和Observers最直接的方法是在Subject中存储Observers的索引。但是，当有大量Subject和少量Observers时这种作法的存储消耗过大。一个解决的方法是建立统一Subject-Observer的映射，这样没有Observer的Subjectjiiu不会占用额外空间。
