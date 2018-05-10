@@ -6,10 +6,12 @@
 class Handler:
     def __init__(self,successor):
         self._successor = successor;
+
     def handle(self,request):
         i = self._handle(request)
-        if  not i:
+        if not i:
             self._successor.handle(request)
+
     def _handle(self, request):
         raise NotImplementedError('Must provide implementation in subclass.')
 
@@ -34,6 +36,7 @@ class ConcreteHandler3(Handler):
         if 20 < request <= 30:
             print('request {} handled in handler 3'.format(request))
             return True
+
 class DefaultHandler(Handler):
     
     def _handle(self, request):
@@ -42,8 +45,10 @@ class DefaultHandler(Handler):
 
 
 class Client:
+
     def __init__(self):
         self.handler = ConcreteHandler1(ConcreteHandler3(ConcreteHandler2(DefaultHandler(None))))
+        
     def delegate(self, requests):
         for request in requests:
             self.handler.handle(request)

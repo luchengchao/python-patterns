@@ -14,7 +14,7 @@
 
 ![structure](./res/Memento.png)
 
-Memento对于Caretaker只开放**窄接口**——Caretaker只存储和传递Memento，但不能访问其中的state（如何实现？private方法+设置Originator为友元？），对于Originator开放**宽接口**——能够访问state。
+Memento对于Caretaker只开放**窄接口**——Caretaker只存储和传递Memento，但不能访问其中的state，对于Originator开放**宽接口**——能够访问state。
 
 ## 模式效果
 
@@ -39,7 +39,7 @@ Memento对于Caretaker只开放**窄接口**——Caretaker只存储和传递Mem
 
 1. 语言的支持
 
-	备忘录模式需要宽窄两种接口，理想情况下实现语言要支持两层的静态保护。C++中，你可以将*宽接口设为私有*，然后将发起人设为友元，将窄接口设为公开。
+	备忘录模式需要宽窄两种接口，理想情况下实现语言要支持两层的静态保护。C++中，你可以将*宽接口设为私有，然后将发起人设为友元，将窄接口设为公开*。
 2. 存储变化增量
 
 	当备忘录按照一个可预测的顺序创建和传回时，可以只存储发起人内部状态的增量信息

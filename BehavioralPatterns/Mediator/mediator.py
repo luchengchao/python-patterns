@@ -8,6 +8,7 @@ import time
 
 
 class TC:
+    '''Access db and report the result bt TM'''
 
     def __init__(self):
         self._tm = None
@@ -78,6 +79,7 @@ class DB:
 
 
 class TestManager:
+    '''The Mediator object'''
 
     def __init__(self):
         self._reporter = None

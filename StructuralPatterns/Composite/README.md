@@ -86,7 +86,7 @@
 
 8. 生命周期管理
 
-	子对象的生命周期尤其父对象管理，即由Composite负责删除其中的Leaf或子Composite。
+	子对象的生命周期由其父对象管理，即由Composite负责删除其中的Leaf或子Composite。
 	
 	但是，当Leaf对象是不可变且共享的，就不符合这一原则。
 

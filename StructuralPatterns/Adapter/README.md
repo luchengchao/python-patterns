@@ -23,13 +23,13 @@
 
 1. 继承
 	
-	适配器继承操作对象和适配目标。这类适配器成为***类适配器***（***Class Adapter***）。
+	适配器继承操作对象和适配目标。这类适配器成为**类适配器**（**Class Adapter**）。
 
 	![structure](./res/AdapterInherit.png)
 
 2. 组合
 
-	适配器继承操作对象，并持有适配目标的引用。这类适配器成为***对象适配器***（***object adapter***）.
+	适配器继承操作对象，并持有适配目标的引用。这类适配器成为**对象适配器**（**object adapter**）.
 
 	![structure](./res/AdapterComposite.png)
 

@@ -61,7 +61,7 @@
 2. 管理共享对象
 	* client不允许直接实例化共享对象，而应委托给FlyweightFactory；
 	* FlyweightFactory返回共享对象，或实例化对象；
-	* 可以使用引用计数维护共享对象，但在flyweight数量固定会较少时，没有这么做的必要 
+	* 可以使用引用计数维护共享对象，但在flyweight数量固定且较少时，没有这么做的必要 
 
 
 
